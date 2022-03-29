@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "Customer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eMail": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "Password": {
+      "type": "password"
+    },
+    "Wish_List": {
+      "type": "dynamiczone",
+      "components": [
+        "product-component.wish-list"
+      ]
+    },
+    "orders_list": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "customer"
+    },
+    "shopping_cart": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-component.shopping-cart"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "adresse-book.billing-address"
+    },
+    "name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "customer_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer-group.customer-group",
+      "inversedBy": "customers"
+    }
+  }
+}

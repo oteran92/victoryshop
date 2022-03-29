@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_groups",
+  "info": {
+    "singularName": "customer-group",
+    "pluralName": "customer-groups",
+    "displayName": "Customer Group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "customers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer.customer",
+      "mappedBy": "customer_group"
+    },
+    "special_discount": {
+      "type": "integer"
+    },
+    "vendors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vendor.vendor"
+    }
+  }
+}

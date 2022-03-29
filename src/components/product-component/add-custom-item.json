@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_product_component_add_custom_items",
+  "info": {
+    "displayName": "Add custom item",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "item_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

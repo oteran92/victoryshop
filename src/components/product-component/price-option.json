@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_optiones_price_price_options",
+  "info": {
+    "displayName": "Price B2B",
+    "icon": "dollar-sign",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "quantity": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "total_price": {
+      "type": "decimal"
+    },
+    "quantity_description": {
+      "type": "enumeration",
+      "enum": [
+        "Stück",
+        "Paar",
+        "Set",
+        "Display"
+      ]
+    }
+  }
+}

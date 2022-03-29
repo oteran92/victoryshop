@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_adresse_book_billing_addresses",
+  "info": {
+    "displayName": "address",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "address1": {
+      "type": "string",
+      "required": true
+    },
+    "address2": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "integer",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "default_adresse": {
+      "type": "boolean",
+      "required": true
+    },
+    "address_type": {
+      "type": "enumeration",
+      "enum": [
+        "Shipping Address",
+        "Billing Address"
+      ],
+      "required": true
+    }
+  }
+}

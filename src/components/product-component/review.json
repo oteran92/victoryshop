@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_product_component_reviews",
+  "info": {
+    "displayName": "review",
+    "icon": "award",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "richtext"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "rating": {
+      "type": "enumeration",
+      "enum": [
+        "start 1",
+        "start 2",
+        "start 3",
+        "start 4",
+        "start 5"
+      ]
+    }
+  }
+}

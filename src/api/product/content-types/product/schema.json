@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Unit_Price": {
+      "type": "decimal",
+      "default": 0
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "EAN": {
+      "type": "biginteger",
+      "min": "0",
+      "required": false,
+      "unique": true
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "Delivery": {
+      "type": "date"
+    },
+    "Price_Compare": {
+      "type": "decimal",
+      "min": 0
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "price": {
+      "type": "dynamiczone",
+      "components": [
+        "product-component.price-option",
+        "product-component.price-b2-c"
+      ]
+    },
+    "SKU1": {
+      "type": "string"
+    },
+    "review": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-component.review"
+    },
+    "meta_data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product-component.meta-data"
+    },
+    "vendor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vendor.vendor",
+      "inversedBy": "products"
+    }
+  }
+}

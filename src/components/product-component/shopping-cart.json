@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_product_component_shopping_carts",
+  "info": {
+    "displayName": "Shopping Cart",
+    "icon": "dolly-flatbed",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Date": {
+      "type": "datetime"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}

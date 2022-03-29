@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_list_price_wish_lists",
+  "info": {
+    "displayName": "Wish List",
+    "icon": "heart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}

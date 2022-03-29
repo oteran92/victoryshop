@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_product_component_price_b2_cs",
+  "info": {
+    "displayName": "Price B2C",
+    "icon": "money-bill",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "delivery_time": {
+      "type": "date"
+    },
+    "stock_quantity": {
+      "type": "integer"
+    }
+  }
+}

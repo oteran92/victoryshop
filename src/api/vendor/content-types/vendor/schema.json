@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendors",
+  "info": {
+    "singularName": "vendor",
+    "pluralName": "vendors",
+    "displayName": "Vendor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Company_Name": {
+      "type": "string",
+      "required": true
+    },
+    "vendor_key": {
+      "type": "uid"
+    },
+    "eMail": {
+      "type": "email"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "vendor"
+    },
+    "Password": {
+      "type": "password"
+    },
+    "Imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "meta_data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product-component.meta-data"
+    },
+    "profit_margin": {
+      "type": "decimal"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "CHF",
+        "Euro",
+        "USD Dollar"
+      ]
+    }
+  }
+}
