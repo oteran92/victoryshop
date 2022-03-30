@@ -1,5 +1,5 @@
 const path = require('path');
-/*
+
 module.exports = ({ env }) => ({
   connection: {
     client: 'sqlite',
@@ -9,8 +9,8 @@ module.exports = ({ env }) => ({
     useNullAsDefault: true,
   },
 });
-*/
 
+/*
 module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
@@ -24,3 +24,4 @@ module.exports = ({ env }) => ({
     useNullAsDefault: true,
   },
 });
+*/
